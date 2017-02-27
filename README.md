@@ -1,6 +1,7 @@
 [![Build Status](https://img.shields.io/travis/johngeorgewright/persist-env/master.svg?style=flat-square)](https://travis-ci.org/johngeorgewright/persist-env)
 [![NPM Version](https://img.shields.io/npm/v/persist-env.svg?style=flat-square)](https://www.npmjs.com/package/persist-env)
 [![Dependencies](https://img.shields.io/gemnasium/johngeorgewright/persist-env.svg?style=flat-square)](https://gemnasium.com/github.com/johngeorgewright/persist-env)
+[![Greenkeeper badge](https://badges.greenkeeper.io/johngeorgewright/persist-env.svg)](https://greenkeeper.io/)
 [![License](https://img.shields.io/npm/l/persist-env.svg?style=flat-square)](https://github.com/johngeorgewright/persist-env/blob/master/LICENSE)
 
 # persist-env
