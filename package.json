@@ -1,0 +1,40 @@
+{
+  "name": "persist-env",
+  "version": "0.0.0",
+  "description": "Persist NPM environment variables between scripts",
+  "main": "index.js",
+  "bin": {
+    "prst": "./bin/prst"
+  },
+  "config": {
+    "foo": "foo"
+  },
+  "scripts": {
+    "test-prst": "echo \"$npm_package_config_foo == bar\" && [[ $npm_package_config_foo == \"bar\" ]]",
+    "test": "npm_package_config_foo=bar; ./bin/prst npm run test-prst"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johngeorgewright/persist-env.git"
+  },
+  "keywords": [
+    "env",
+    "scripts",
+    "persist"
+  ],
+  "author": "John Wright <johngeorge.wright@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johngeorgewright/persist-env/issues"
+  },
+  "homepage": "https://github.com/johngeorgewright/persist-env#readme",
+  "dependencies": {
+    "lodash.takerightwhile": "^4.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.16.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.2",
+    "eslint-plugin-standard": "^2.0.1"
+  }
+}
