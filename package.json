@@ -10,8 +10,9 @@
     "foo": "foo"
   },
   "scripts": {
-    "test-prst": "echo \"$npm_package_config_foo == bar\" && [[ $npm_package_config_foo == \"bar\" ]]",
-    "test": "npm_package_config_foo=bar; ./bin/prst npm run test-prst"
+    "lint": "eslint .",
+    "test-func": "echo \"$npm_package_config_foo == bar\" && bash -c '[[ $npm_package_config_foo == \"bar\" ]]'",
+    "test": "npm run lint && npm_package_config_foo=bar; ./bin/prst npm run test-func"
   },
   "repository": {
     "type": "git",
