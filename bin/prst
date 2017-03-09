@@ -11,7 +11,7 @@ let cmd = takeRightWhile(process.argv, (o => o !== __filename)).join(' ')
 
 cmd = cmd.replace(/npm\s+(?:run(?:-script)?)\s+(\S+)/g, (match, script) => getScript(script, match))
 
-cmd = cmd.replace(/npm\s+t(?:est)?/g, () => getScript('test', match))
+cmd = cmd.replace(/npm\s+t(?:est)?/g, () => getScript('test'))
 
 exec(cmd, (error, stdout, stderr) => {
   if (error) {
