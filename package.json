@@ -1,6 +1,6 @@
 {
   "name": "persist-env",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Persist NPM environment variables between scripts",
   "main": "index.js",
   "bin": {
