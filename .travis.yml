@@ -1,20 +1,25 @@
 language: node_js
 
+cache:
+  directories:
+    - node_modules
+
+notifications:
+  email: false
+
 before_install:
   - npm i -g npm
   - npm i -g greenkeeper-lockfile@1
 
 before_script:
+  - npm prune
   - greenkeeper-lockfile-update
 
 after_script:
   - greenkeeper-lockfile-upload
 
 deploy:
-  provider: npm
-  email: johngeorge.wright@gmail.com
-  api_key:
-    secure: 1/cf+h04JAT9RntKFlOQ6jqCvkWD+K/t4RUFq9wXiSSjCnCdlGjBjQo6vlv8mcAzgjNU+ne3gbQugd0zqlv8hEs1UIJqnLnjdh0OJUkKDDWvOj5dv+Ok5vMICXbm80Wb+LsAN395MwMzAZm8eL/pIS37NLBfHYXbP5IdBFh+g5sFW+uq/nhp3/aKq0TudIH8CkD/voEbznUVZu2IlNKsYhnMom/l6utClSA6p8ASfBn3a2j/0TX51hP13ZWOiSZxBDUkwQ3TXa1H1nKkkuv8LqyzHK+KKNdHHVmIXLSezyxKfI6dZ1TB3tP4x2JZPOppJr8nOEfMfgAd8+lGKGqVRoALKwvbM7migJjw5Zza0nQ+RYg0z3Qu8MbyNtKQ6Ss7cP8WxRuyJ6rq6hhlf7K/MgiHw+YVFyS9fhoIdmVnY+2+zHbPeWqiXd0ytts3N7HZnhhapymym4IXCrK8XeRq/6cBD7waR0zTX7N2+kRym950GOEQhOWEoLm+wbPyNPKhCyd1kx9uIPVLn4dreKd5RRHNycR+Hc2jHFeLQtjQtM3TrnlDYTcDRCULef21Aanw9dy0394Ufjtd4mAV6zRG73+txCiV5iAgJGztubg4lLJEEEBX8fiIJsiArWkoiUMYlo+uHxIZpJTZh/JBOTMmBckE9AdR3O6IA5Gf3pOsKZM=
+  provider: script
+  script: npm run semantic-release
   on:
-    tags: true
-    repo: johngeorgewright/persist-env
+    branch: master
