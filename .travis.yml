@@ -8,7 +8,7 @@ notifications:
   email: false
 
 before_install:
-  - npm i -g npm
+  - '[[ $(node -v) =~ ^v9.*$ ]] || npm install -g npm@latest'
   - npm i -g greenkeeper-lockfile@1
 
 install:
