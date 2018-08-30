@@ -4,10 +4,6 @@ node_js:
   - lts/*
   - stable
 
-cache:
-  directories:
-    - node_modules
-
 notifications:
   email: false
 
@@ -16,7 +12,7 @@ before_install:
   - npm i -g greenkeeper-lockfile@1
 
 install:
-  - '[[ $TRAVIS_BRANCH == greenkeeper/* ]] && npm install || npm ci'
+  - npm ci || npm install
 
 before_script:
   - npm prune
