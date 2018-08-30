@@ -12,6 +12,7 @@ before_install:
   - npm i -g greenkeeper-lockfile@1
 
 install:
+  - rm node_modules/.bin/npm
   - npm ci || npm install
 
 before_script:
