@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const {exec} = require('child_process')
+const { exec } = require('child_process')
 const takeRightWhile = require('lodash.takerightwhile')
-const {join: joinPath} = require('path')
-const {scripts} = require(joinPath(process.cwd(), 'package.json'))
+const { join: joinPath } = require('path')
+const { scripts } = require(joinPath(process.cwd(), 'package.json'))
 
 const getScript = (name, dflt) => scripts[name] || dflt
 
