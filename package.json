@@ -10,10 +10,10 @@
     "foo": "foo"
   },
   "scripts": {
-    "lint": "eslint bin/*",
+    "lint": "eslint .",
     "test-func": "echo \"$npm_package_config_foo == bar\" && bash -c '[[ $npm_package_config_foo == \"bar\" ]]'",
     "test": "npm run lint && npm_package_config_foo=bar; ./bin/prst npm run test-func",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
@@ -34,13 +34,13 @@
     "lodash.takerightwhile": "^4.6.0"
   },
   "devDependencies": {
-    "eslint": "^6.0.0",
-    "eslint-config-standard": "^14.0.0",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "semantic-release": "^17.0.0",
-    "semantic-release-cli": "^5.0.0"
+    "eslint": "^7.4.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "semantic-release": "^17.1.1",
+    "semantic-release-cli": "^5.3.1"
   }
 }
