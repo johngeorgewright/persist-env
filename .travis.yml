@@ -1,15 +1,18 @@
 language: node_js
 
-cache:
-  directories:
-    - node_modules
+node_js:
+  - lts/*
+  - stable
 
 notifications:
   email: false
 
 before_install:
-  - npm i -g npm
+  - '[[ $(node -v) =~ ^v9.*$ ]] || npm install -g npm@latest'
   - npm i -g greenkeeper-lockfile@1
+
+install:
+  - npm ci || npm install
 
 before_script:
   - npm prune
